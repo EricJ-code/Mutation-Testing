@@ -1,6 +1,6 @@
 # Mutation-Testing
 ## Introduction
-This is an assignment that introduces the idea of mutation testing. I used Mutpy to automate this process.
+This report documents using mutation testing to evaluate and improve the Polynomial class test suite. The MutPy tool was used to inject faults into the code to create mutated versions called mutants. The goal was to run tests against these mutants to kill them. Surviving mutants indicate inadequate tests. Common mutation operators focused on modifications to arithmetic, comparison operators, statements, etc. By analyzing mutant detection, the test suite was augmented through iterative passes.
 ## List of Defined Mutation Operations
 - Arithmetic Operator Swapping:
     - Replace arithmetic operators like addition, subtraction, multiplication and division with one another to test if the test suite detects these changes.
@@ -131,5 +131,6 @@ There is another example like this on line 85.
    89:             c = (a + b) / 2
 --------------------------------------------------------------------------------
 ```
+Overall, this test suite needs more testing for embedded "ifs" and loops.
 ## Conclusion
-In conclusion this test suite needs more testing for embedded "ifs" and loops.
+In summary, mutation testing provided valuable insights into test quality. After successive rounds, test effectiveness improved from 54.3% to 69.6% mutation score. However, some arithmetic and conditional mutants survived, indicating areas needing more robust testing. This evaluation proves mutation testing can incrementally guide and strengthen test suites over time by revealing shortcomings through controlled fault injection. Mutation score measures resilience unlike high-level coverage metrics alone.
